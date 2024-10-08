@@ -1,6 +1,6 @@
 ﻿/*Sort an Array of 0s and 1s
  * Time Complexity O(n)
- * Space Complexity O(n)
+ * Space Complexity O(1)
  * */
 using System;
 using System.Collections.Generic;

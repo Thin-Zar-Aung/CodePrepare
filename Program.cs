@@ -1,6 +1,7 @@
 ﻿using CodePrepare.Array;
+using System;
 #region"Array---------------------"
-
+/*
 #region "Write a function to reverse the given array. "
 
 var Arr_No1 = new No1_ArrayReverse();
@@ -135,8 +136,6 @@ Console.WriteLine(string.Join(", ", ArrNo10nums1) + "--->" + string.Join(", ", N
 #endregion
 
 #region"Sort an Array of 0s and 1s."
-
-
 var ArrNo11 = new No11_ArrayZeroandOnesort();
 int[] ArrNo11nums = { 0, 1, 0, 0, 1 };
 ArrNo11.sortArr(ArrNo11nums);
@@ -145,4 +144,69 @@ int[] ArrNo11nums1 = { 0, 0, 0, 1, 1 };
 ArrNo11.sortArr(ArrNo11nums);
 Console.WriteLine(string.Join(", ", new int[] { 0, 0, 0, 1, 1 }) + "--->" + string.Join(", ", ArrNo11nums1));
 #endregion
+
+#region"Kadane’s Algorithm Find the contiguous subarray with the largest sum in an array of integers."
+var ArrNo12 = new No12_Kadane();
+int[] ArrNo12nums = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+Console.WriteLine(string.Join(", ", ArrNo12nums) + "--->" + ArrNo12.getMaxSubArrSum(ArrNo12nums));
+int[] ArrNo12nums1 = { 1 };
+Console.WriteLine(string.Join(", ", ArrNo12nums1) + "--->" + ArrNo12.getMaxSubArrSum(ArrNo12nums1));
+int[] ArrNo12nums2 = { 5, 4, -1, 7, 8 };
+Console.WriteLine(string.Join(", ", ArrNo12nums2) + "--->" + ArrNo12.getMaxSubArrSum(ArrNo12nums2));
+#endregion
+
+
+#region"●Find the length of the longest sequence of consecutive elements in an unsorted array."
+var ArrNo13 = new No13_LongConseElements();
+int[] No13arr1 = { 100,6,7,7,1,1, 2, 3, 4, 4, 5,99,5,6,98,97};
+int ArrNo13res = ArrNo13.getLongElement(No13arr1);//duplicate
+
+int[] No13arr2 = { 100,99,3,5,3,5,4,2,101 };
+int ArrNo13res2 = ArrNo13.getLongElement(No13arr2);//duplicate
+
+#endregion
+
+#region"●Find the length of the longest sequence of consecutive elements in an unsorted array."
+var ArrNo14 = new No14_ArrayMerger();
+int[] ArrNo14res = ArrNo14.SortMergeArray(new int[] { 1, 3, 5, 7 },new int[] { 2,4,6 });
+int[] ArrNo14res1 = ArrNo14.SortMergeArray(new int[] { 1, 3, 5, 7 }, new int[] {2,6,8,10 });
+
+#endregion
+
+#region"●Find the length of the longest sequence of consecutive elements in an unsorted array."
+var ArrNo15 = new No15_FindKLargest();
+int ArrNo15res = ArrNo15.LargestElement(new int[] { 3, 2, 1, 5, 6, 4 },  2);
+Console.WriteLine(ArrNo15res);
+int ArrNo15res1 = ArrNo15.LargestElement(new int[] { 3, 2, 3, 1, 2, 4, 5, 5, 6 }, 4);
+Console.WriteLine(ArrNo15res1);
+#endregion
+
+#region"Find the number of subarrays whose sum equals a given value."
+var ArrNo17 = new No17_SubArraySum();
+Console.WriteLine(ArrNo17.getSubSum(new int[]{ 1 },0));
+Console.WriteLine(ArrNo17.getSubSum(new int[] { 3,-3,1,1,1 }, 3));
+Console.WriteLine(ArrNo17.getSubSum(new int[] { -2, 1, 2, -2, 5,-2,1 }, 3));
+#endregion
+
+#region"Find the number of subarrays whose sum equals a given value."
+var ArrNo18 = new No18_StockPrice();
+Console.WriteLine(ArrNo18.getMaxProfit(new int[] { 2, 3, 6, 1, 8, 9, 11, 18, 2,4 }));
+Console.WriteLine(ArrNo18.getMaxProfit(new int[] { 7, 6, 4, 3, 1 }));
+
+#endregion
+
+#region"Find the number of subarrays whose sum equals a given value."
+var ArrNo19 = new No19_subarrarysum();
+Console.WriteLine(ArrNo19.getSubArraySum(new int[] { 1, 1, 1 }, 2));
+Console.WriteLine(ArrNo19.getSubArraySum(new int[] { 1, 2, 3 },3));
+#endregion
+
+
+#region"Trapping Rain Water"
+var ArrNo16 = new No16_TrapRain();
+Console.WriteLine(ArrNo16.getMax(new int[] {3,0,1,0,4,0,2 }));
+Console.WriteLine(ArrNo16.getMax(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 })); 
+
+#endregion
+*/
 #endregion

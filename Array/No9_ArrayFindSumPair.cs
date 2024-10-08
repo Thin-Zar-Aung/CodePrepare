@@ -1,7 +1,7 @@
 ﻿/*
  * Given an array, find all pairs that sum up to a specific target.
  * Time Complexity : O(N)
- * Space Complexity : O(N)
+ * Space Complexity : O(1)
  */
 using System;
 using System.Collections.Generic;

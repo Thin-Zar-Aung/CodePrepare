@@ -1,6 +1,6 @@
 ﻿/*
  ●	Given an array, move all zeros to the end while maintaining the relative order of non-zero elements. 
-Time Complexity : O(2n) ignore constants --> O(n)
+Time Complexity : O(n)
 Space Complexity : O(1)
 */
 using System;
@@ -23,13 +23,11 @@ namespace CodePrepare.Array
             {
                 if (arr[i] != 0)
                 {
-                    arr[nonzeroindex] = arr[i];
+                    int temp = arr[i];
+                    arr[i] = arr[nonzeroindex];
+                    arr[nonzeroindex] = temp;
                     nonzeroindex++;
                 }
-            }
-            for(int i = nonzeroindex; i < arr.Length; i++)
-            {
-                arr[i] = 0;
             }
             return arr;
 
