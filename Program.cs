@@ -1,4 +1,5 @@
 ﻿using CodePrepare.Array;
+using CodePrepare.Linked_List;
 using System;
 #region"Array---------------------"
 /*
@@ -208,5 +209,147 @@ Console.WriteLine(ArrNo16.getMax(new int[] {3,0,1,0,4,0,2 }));
 Console.WriteLine(ArrNo16.getMax(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 })); 
 
 #endregion
+
+#region"Definisng, Inserting and Removing elements in a Linked List"
+var No1_lst = new No1_LnkLstInsDel();
+ListNode n4 = new ListNode(5, null);
+ListNode n3 = new ListNode(4, n4);
+ListNode n2 = new ListNode(3, n3);
+ListNode n1 = new ListNode(2, n2);
+ListNode newnode = new ListNode(1, null);
+ListNode current = No1_lst.insertFirst(n1, newnode);//insert head of the node
+No1_lst.print(current);
+
+
+ListNode n8 = new ListNode(9, null);
+ListNode n7 = new ListNode(8, n8);
+ListNode n6 = new ListNode(7, n7);
+ListNode n5 = new ListNode(6, n6);
+ListNode newnode1 = new ListNode(10, null);
+ListNode current1 = No1_lst.insertLast(n5, newnode1);//insert tail of the node
+No1_lst.print(current1);
+
+#endregion
+
+
+ListNode n14 = new ListNode(10, null);
+ListNode n13 = new ListNode(9, n14);
+ListNode n12 = new ListNode(7, n13);
+ListNode n11 = new ListNode(6, n12);
+ListNode newnode2 = new ListNode(8, null);
+ListNode current2 = No1_lst.insertbetween(n11, 2, newnode2);//insert between node
+No1_lst.print(current2);
+
+ListNode n20 = new ListNode(4, null);
+ListNode n19 = new ListNode(3, n20);
+ListNode n18 = new ListNode(2, n19);
+ListNode n17 = new ListNode(1, n18);
+ListNode current3 = No1_lst.delHeadNode(n17);
+No1_lst.print(current3);
+
+
+
+ListNode n24 = new ListNode(4, null);
+ListNode n23 = new ListNode(3, n24);
+ListNode n22 = new ListNode(2, n23);
+ListNode n21 = new ListNode(1, n22);
+ListNode current4 = No1_lst.delLastNode(n21);
+No1_lst.print(current4);
+
+
+
+ListNode n28 = new ListNode(4, null);
+ListNode n27 = new ListNode(3, n28);
+ListNode n26 = new ListNode(2, n27);
+ListNode n25 = new ListNode(1, n26);
+ListNode current5 = No1_lst.delbetween(n25,2);
+No1_lst.print(current5);
+#endregion
+ 
+#region "Reverse a linkedlist"
+var arrNo2Lst = new No2_LnkLstReverse();
+ListNode no2_five = new ListNode(5, null);
+ListNode no2_four = new ListNode(4, no2_five);
+ListNode no2_three = new ListNode(3, no2_four);
+ListNode no2_two = new ListNode(2, no2_three);
+ListNode no2_one = new ListNode(1, no2_two);
+ListNode no2lst = arrNo2Lst.reverse(no2_one);
+while (no2lst != null)
+{
+    Console.WriteLine(no2lst.val);
+    no2lst =no2lst.next;
+}
+#endregion
+
+var arrNo3Lst = new No3_LnkLstReverseK();
+ListNode no3_seven = new ListNode(7, null);
+ListNode no3_six = new ListNode(6, no3_seven);
+ListNode no3_five = new ListNode(5, no3_six);
+ListNode no3_four = new ListNode(4, no3_five);
+ListNode no3_three = new ListNode(3, no3_four);
+ListNode no3_two = new ListNode(2, no3_three);
+ListNode no3_one = new ListNode(1, no3_two);
+ListNode no3lst = arrNo3Lst.reverseK(no3_one,3);
+while (no3lst != null)
+{
+    Console.WriteLine(no3lst.val);
+    no3lst = no3lst.next;
+}
+#region "Recursively reverse a Linked List"
+var arrNo4Lst = new No4_LnkRecursive();
+ListNode no4_five = new ListNode(5, null);
+ListNode no4_four = new ListNode(4, no4_five);
+ListNode no4_three = new ListNode(3, no4_four);
+ListNode no4_two = new ListNode(2, no4_three);
+ListNode no4_one = new ListNode(1, no4_two);
+ListNode no4lst = arrNo4Lst.recurseive(no4_one);
+while (no4lst != null)
+{
+    Console.WriteLine(no4lst.val);
+    no4lst = no4lst.next;
+}
+#endregion
+
+#region "Recursively reverse a Linked List"
+var arrNo5Lst = new No5_LnkLstMiddle();
+ListNode no5_five = new ListNode(5, null);
+ListNode no5_four = new ListNode(4, no5_five);
+ListNode no5_three = new ListNode(3, no5_four);
+ListNode no5_two = new ListNode(2, no5_three);
+ListNode no5_one = new ListNode(1, no5_two);
+int no5lst = arrNo5Lst.findMiddle(no5_one);
+    Console.WriteLine(no5lst);
+
+#endregion
+
+#region "Detect Cycle in a List"
+var arrNo6Lst = new No6_DetectCycle();
+ListNode no6_four = new ListNode(4, null);
+ListNode no6_three = new ListNode(3, no6_four);
+ListNode no6_two = new ListNode(2, no6_three);
+ListNode no6_one = new ListNode(1, no6_two);
+no6_four.next = no6_two;
+bool no6lst = arrNo6Lst.IsCycle(no6_one);
+Console.WriteLine(no6lst);
+ListNode no6_8 = new ListNode(4, null);
+ListNode no6_7 = new ListNode(3, no6_8);
+ListNode no6_6 = new ListNode(2, no6_7);
+ListNode no6_five = new ListNode(1, no6_6);
+Console.WriteLine(arrNo6Lst.IsCycle(no6_five));
+#endregion
 */
+#region "Return Nth Node from the end of the List"
+var lstNo7 = new No7_getNthNode();
+ListNode no7_8 = new ListNode(4, null);
+ListNode no7_7 = new ListNode(3, no7_8);
+ListNode no7_6 = new ListNode(2, no7_7);
+ListNode no7_five = new ListNode(1, no7_6);
+Console.WriteLine(lstNo7.getNthNode(no7_five,2));
+ListNode no7_13 = new ListNode(8, null);
+ListNode no7_12 = new ListNode(4, no7_13);
+ListNode no7_11 = new ListNode(33, no7_12);
+ListNode no7_10 = new ListNode(23, no7_11);
+ListNode no7_9 = new ListNode(11, no7_10);
+Console.WriteLine(lstNo7.getNthNode(no7_9, 3));
+#endregion
 #endregion
